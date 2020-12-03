@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "provision-assets-demo-client-side-solution",
+    "id": "256b4e92-ea2c-41a3-9664-4547e260eddc",
+    "version": "2.0.0.0",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false,
+    "features": [{
+      "title": "spartefacts-provisioning Feature",
+      "description": "spartefacts-provisioning Feature",
+      "id": "807529bd-73ca-49ab-bde9-176c29a610df",
+      "version": "2.0.0.0",
+      "assets": {
+        "elementManifests": [
+          "elements.xml",
+          "elements-v2.xml"
+        ],
+        "elementFiles": [
+          "schema.xml"
+        ],
+        "upgradeActions": [
+          "upgrade-actions-v2.xml"
+        ]
+      }
+    }],
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": ""
+    }
+  },
+  "paths": {
+    "zippedPackage": "solution/provision-assets-demo.sppkg"
+  }
+}

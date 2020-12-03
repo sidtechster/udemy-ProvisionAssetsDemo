@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+    <Field ID="{228c4d67-4661-4d46-85fd-f6471e5a31d7}"
+    Name="Model"
+    Group="CustomDemoGroup"
+    Type="Text"
+    Hidden="FALSE"
+    DisplayName="Model" />
+
+    <Field ID="{635984c6-3b1f-4ea0-9e1a-973d2eb58745}"
+    Name="Fuel"
+    Group="CustomDemoGroup"
+    Type="Choice"
+    Hidden="FALSE"
+    DisplayName="Fuel">
+
+        <CHOICES>
+            <CHOICE>Petrol</CHOICE>
+            <CHOICE>Diesel</CHOICE>
+        </CHOICES>
+    </Field>
+
+
+    <ContentType ID="0x01001a479cb96a6a4c67b125f2a8f41b025c"
+        Name="CarContentType"
+        Group="Custom Content Type"
+        Description="Custom CT">
+
+        <FieldRefs>
+            <FieldRef ID="{228c4d67-4661-4d46-85fd-f6471e5a31d7}" />
+            <FieldRef ID="{635984c6-3b1f-4ea0-9e1a-973d2eb58745}" />
+        </FieldRefs>
+    </ContentType>
+
+    <ListInstance
+        CustomSchema="schema.xml"
+        FeatureId="00bfea71-de22-43b2-a848-c05709900100"
+        Title="CarInventory"
+        Description="Car inventory"
+        TemplateType="100"
+        Url="Lists/CarInventory">
+    </ListInstance>
+
+
+</Elements>
+
+<!--Feature definition in "package-solution.json"-->
+<!-- FeatureId in ListInstance is fixed for TemplateType=100. Do not change it.-->
